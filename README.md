@@ -39,7 +39,7 @@
 |`Node`|镜像节点|
 |`ReverseNode`|文件加速节点|
 
-<font size=4><b>如果有无私奉献的道友愿意共享节点，欢迎给发邮件`2254228017@qq.com`</b></font>  
+<font size=4><b>如果有无私奉献的道友愿意共享节点，欢迎给我发邮件`2254228017@qq.com`</b></font>  
 ## 代下载网站 
 `https://ednovas.xyz/2021/01/24/githubspeedup/#_2-github%E6%96%87%E4%BB%B6%E5%8A%A0%E9%80%9F`
 ## to do 
