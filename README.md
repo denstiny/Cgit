@@ -44,4 +44,5 @@
 `https://ednovas.xyz/2021/01/24/githubspeedup/#_2-github%E6%96%87%E4%BB%B6%E5%8A%A0%E9%80%9F`
 ## to do 
 - 自定修改克隆后的项目git配置（有时间在说问题不大）
+- 自动更换代理
 - qt界面工具
