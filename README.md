@@ -31,6 +31,17 @@
 	],
 	"Rreverse":0,
 ```
+> 以上节点作者如果不想被公开使用请联系我删除
+
+|节点|作者|
+|:-:|:-:|
+|`https://gh.api.99988866.xyz`|https://github.com/hunshcn/gh-proxy |
+|`https://www.ioiox.com/`|https://www.ioiox.com/
+|`https://hub.fastgit.org`|不详
+|`https://github.com.cfpmjs`|https://chrome.google.com/webstore/detail/github%E5%8A%A0%E9%80%9F/mfnkflidjnladnkldfonnaicljppahpg/related?hl=zh-CN
+
+
+
 `NChoose` 默认为1，选择使用`https://hub.fastgit.org` 节点,0为禁用  
 `Rreverse` 默认禁用
 ### 节点描述

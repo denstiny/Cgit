@@ -19,6 +19,7 @@ class CgitWorkCompany {
 		// 提取json数据
 		bool CgitConfigRead(string &strk);
 		// 处理字符串
+		void ModifyAddress(int argc,char *argv[]);
 };
 
 

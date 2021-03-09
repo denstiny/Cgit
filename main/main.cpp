@@ -28,6 +28,12 @@
 #include <cstdlib>
 #include "../include/Cgit.hpp"
 
+void ShowHelp() {
+	cout << "-h help" << endl;
+	cout << "cgit url {address}" << endl;
+	exit(0);
+}
+
 void CgitClone(string &url) {
 	FILE * fp;
 	char buffer[BUFSIZ];
@@ -44,6 +50,9 @@ void CgitClone(string &url) {
 }
 
 int main(int argc,char *argv[]) {
+	string st = argv[1];
+	if(argc == 2 && st == "-h") 
+		ShowHelp();
 	CgitWorkCompany p(argc,argv);
 	CgitClone(p.URL);
 	return 0;
