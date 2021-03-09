@@ -1,0 +1,24 @@
+{
+	"Node":[
+				"https://hub.fastgit.org",
+				"https://github.com.cfpmjs"
+	],
+	"Node节点，你可以导入多个节点":"此处不填",
+	
+	
+	"NChoose":1,
+	"Choose选择加速镜像，1为第一个节点，0为禁用":"此处不填",
+	
+	
+	
+	"ReverseNode":[
+				"https://gh.api.99988866.xyz",
+				"https://ghproxy.com"
+	],
+	"ReverseNode节点，你可以导入多个节点":"此处不填",
+	
+	
+	
+	"Rreverse":0,
+	"选择文件加速节点，1为第一个节点，0为禁用":"此处不填"
+}
