@@ -16,7 +16,7 @@
 > 考虑到被强的只有国内道友，所以就不搞什么英文文档了，省得大家麻烦
 
 ## 配置文件
-
+![20210310000101](https://i.loli.net/2021/03/10/3hvZxRIAybiWEBk.png)
 配置文件路径为`HOME/.config/Cgit/Cgit.json`
 <font size=4><b>默认配置文件</b></font>  
 ```
