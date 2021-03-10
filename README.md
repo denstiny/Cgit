@@ -36,9 +36,9 @@
 |节点|作者|
 |:-:|:-:|
 |`https://gh.api.99988866.xyz`|https://github.com/hunshcn/gh-proxy |
-|`https://www.ioiox.com/`|https://www.ioiox.com/
-|`https://hub.fastgit.org`|不详
-|`https://github.com.cfpmjs`|https://chrome.google.com/webstore/detail/github%E5%8A%A0%E9%80%9F/mfnkflidjnladnkldfonnaicljppahpg/related?hl=zh-CN
+|`https://www.ioiox.com/`|https://www.ioiox.com/ |
+|`https://hub.fastgit.org`|https://fastgit.org |
+|`https://github.com.cfpmjs`|https://chrome.google.com/webstore/detail/github%E5%8A%A0%E9%80%9F/mfnkflidjnladnkldfonnaicljppahpg/related?hl=zh-CN |
 
 
 
