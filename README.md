@@ -2,6 +2,7 @@
 <!-- vim-markdown-toc GFM -->
 
 * [Cgit 命令行免代理下载工具](#cgit-命令行免代理下载工具)
+	* [安装](#安装)
 	* [配置文件](#配置文件)
 		* [节点描述](#节点描述)
 	* [代下载网站](#代下载网站)
@@ -15,6 +16,12 @@
 
 > 考虑到被强的只有国内道友，所以就不搞什么英文文档了，省得大家麻烦
 
+## 安装
+```
+git clone https://github.com/denstiny/Cgit.git
+make 
+make install
+```
 ## 配置文件
 ![20210310012016](https://i.loli.net/2021/03/10/3xvzWkwehTgjK24.png)
 配置文件路径为`HOME/.config/Cgit/Cgit.json`
@@ -32,7 +39,6 @@
 	"Rreverse":0,
 ```
 > 以上节点作者如果不想被公开使用请联系我删除
-
 |节点|作者|
 |:-:|:-:|
 |`https://gh.api.99988866.xyz`|https://github.com/hunshcn/gh-proxy |
