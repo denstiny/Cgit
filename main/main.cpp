@@ -30,7 +30,7 @@
 
 void ShowHelp() {
 	cout << "-h help" << endl;
-	cout << "cgit url {address}" << endl;
+	cout << "cgit clone url {address}" << endl;
 	exit(0);
 }
 
@@ -45,15 +45,19 @@ void CgitClone(string &url) {
 		return;
 	}
 	fgets(buffer ,sizeof(buffer),fp);
-	cout << buffer << endl;
 	pclose(fp);
 }
 
 int main(int argc,char *argv[]) {
-	string st = argv[1];
-	if(argc == 2 && st == "-h") 
+	string st;
+	if(argc <= 2 || st == "-h") 
 		ShowHelp();
-	CgitWorkCompany p(argc,argv);
+	if(argc >= 2 && st != "-h") {
+		for (int N_number = 1; N_number < argc; ++N_number) {
+			st += ( string )" " + argv[N_number];
+		}
+	}
+	CgitWorkCompany p(argc,st);
 	CgitClone(p.URL);
 	return 0;
 }
