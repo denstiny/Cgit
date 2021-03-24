@@ -4,7 +4,7 @@
 
 
 
-CgitWorkCompany::CgitWorkCompany(int argc,string &argv) {
+CgitWorkCompany::CgitWorkCompany(int argc,char *argv[]) {
 	// 构造函数
 	string str,NodeStr;
 	int LineNum;
@@ -20,23 +20,20 @@ CgitWorkCompany::CgitWorkCompany(int argc,string &argv) {
 	//  NChoose 节点
 	if((LineNum = tempjson["NChoose"]) != 0) {
 		NodeStr = tempjson["Node"][LineNum-1];
-		cout << "Use NChoose node first: " <<  LineNum << endl;
 		
-		URL = argv;
+		URL = argv[2];
 		if(URL.substr(0,18) == "https://github.com") 
-			URL = NodeStr + URL.substr(18);
+			URL =argv[1] + (string)" " + NodeStr + URL.substr(18);
 	} 
 	// ReverseNode 节点
 	if((LineNum = tempjson["Rreverse"]) != 0) {
 		NodeStr = tempjson["ReverseNode"][LineNum-1];
-		URL = NodeStr+'/'+argv ;
-		cout << "Use Reverse node first: " <<  LineNum << endl;
+		URL = argv[1] + (string)" " + NodeStr+'/'+argv[2] ;
 	}
-	//if(argc > 2) {
-	//	for(int i = 2;i < argc;i++) 
-	//		URL = URL + " " + argv;
-	//}
-	//cout << URL << endl;
+	if(argc > 2) {
+		for(int i = 3;i < argc;i++) 
+			URL = URL + " " + argv[i];
+	}
 }
 
 bool CgitWorkCompany::CgitConfigRead(string &strk) {

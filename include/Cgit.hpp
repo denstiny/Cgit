@@ -14,7 +14,7 @@ class CgitWorkCompany {
 		fstream obs;
 		string URL; // 接受github 仓库链接
 		// 创建普通类
-		CgitWorkCompany(int argc,string &argv);
+		CgitWorkCompany(int argc,char *argv[]);
 		~CgitWorkCompany();
 		// 提取json数据
 		bool CgitConfigRead(string &strk);
