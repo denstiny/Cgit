@@ -1,13 +1,22 @@
 #include "../include/Cgit.hpp"
+#include <algorithm>
+#include <cstdio>
 #include <cstdlib>
+#include <cstring>
 #include <iostream>
+#include <string>
 
 
+string Str_Swap(char *str) {
+	string file_str;
+	return file_str;
+}
 
 CgitWorkCompany::CgitWorkCompany(int argc,char *argv[]) {
 	// 构造函数
 	string str,NodeStr;
 	int LineNum;
+	EndURl = argv[2];
 	obs.open((CgitCwd+CgitConf).c_str(),ios::in);
 	if(!obs.is_open()) {
 		cout << "Error! No configuration file. " << endl;
@@ -49,23 +58,53 @@ bool CgitWorkCompany::CgitConfigRead(string &strk) {
 	strk = str;
 	return true;
 }
-// https://github.com/denstiny/code.git 
+
+
+
+// 克隆完毕,修改github的地址
 void CgitWorkCompany::ModifyAddress(int argc,char *argv[]) {
-	if(argc == 3) {
-		fstream gitconf(argv[2],ios::in | ios::app);
-		if(!gitconf.is_open()) {
-			gitconf.close();
-			return;
-		}else if(argc == 2) {
-			string ur = argv[1];
-			int i=0;
-			for(int s = 0;i < 20 && s <= 4;i++) {
-				if (*(argv[1]+s) == '/' )
-					s++;
-			}
-			ur.substr(i); // 得出项目地址
+	// 取出 文件地址
+	string Str_,file_Str;
+	if(argc > 3)
+		string  url_Work = argv[argc-1];
+	if(argc <= 3) {
+
+		int url_s = strlen(argv[argc-1]);
+
+		while (--url_s && argv[2][url_s] != '/') {
+
+			if(Str_ != ".git")	
+				Str_.insert(Str_.begin(),argv[2][url_s]);
+			else
+				file_Str.insert(file_Str.begin(),argv[2][url_s]);
 		}
 	}
+
+	// 打开文件
+	string filetxt_,tempstr_;
+	file_Str = "./"+file_Str+"/.git/config";
+	file.open(file_Str.c_str(),ios::in | ios::out);
+	if(!file.is_open()) {
+		cout << " 打开git 配置文件失败 " << endl;
+		cout << " open  " <<  file_Str <<  " error!" << endl;
+		return;
+	}
+
+	while (!file.eof()) {
+		getline(file,tempstr_);
+		if(tempstr_.find("url = ") != tempstr_.npos) {
+			tempstr_.erase(7);
+			tempstr_+=EndURl;
+		}
+		filetxt_ += tempstr_ + '\n';
+	}
+
+	file.close();
+
+	file.open(file_Str,ios::trunc | ios::out);
+	file.write(filetxt_.c_str(), filetxt_.size());
+	file.close();
+
 }
 
 

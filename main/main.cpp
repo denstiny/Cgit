@@ -34,7 +34,7 @@ void ShowHelp() {
 	exit(0);
 }
 
-void CgitClone(string &url) {
+bool CgitClone(string &url) {
 	FILE * fp;
 	char buffer[BUFSIZ];
 	string Command = Cgit + url;
@@ -42,18 +42,21 @@ void CgitClone(string &url) {
 	if(fp == NULL) {
 		cout << "网络链接失败，请检查网络，或更换节点" << endl;
 		pclose(fp);
-		return;
+		return false;
 	}
 	fgets(buffer ,sizeof(buffer),fp);
 	cout << buffer << endl;
 	pclose(fp);
+	return true;
 }
+
 
 int main(int argc,char *argv[]) {
 	string st = argv[1];
 	if(argc == 2 && st == "-h") 
 		ShowHelp();
 	CgitWorkCompany p(argc,argv);
-	CgitClone(p.URL);
+	if (CgitClone(p.URL) == true)
+		p.ModifyAddress(argc, argv);
 	return 0;
 }

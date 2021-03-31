@@ -1,7 +1,9 @@
 #pragma Cigt_HPP
 
-#include <string>
+#include <cstdlib>
 #include <cstring>
+#include <iostream>
+#include <string>
 #include <fstream>
 #include "../include/json.hpp"
 using namespace std;
@@ -11,8 +13,9 @@ const string CgitCwd = home+"/.config/Cgit/";
 const string CgitConf = "Cgit.json";
 class CgitWorkCompany {
 	public:
-		fstream obs;
-		string URL; // 接受github 仓库链接
+		fstream obs,file;
+		string URL,EndURl; // 接受github 仓库链接
+
 		// 创建普通类
 		CgitWorkCompany(int argc,char *argv[]);
 		~CgitWorkCompany();
@@ -20,4 +23,5 @@ class CgitWorkCompany {
 		bool CgitConfigRead(string &strk);
 		// 处理字符串
 		void ModifyAddress(int argc,char *argv[]);
+
 };
