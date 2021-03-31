@@ -3,6 +3,7 @@
 
 * [Cgit 命令行免代理下载工具](#cgit-命令行免代理下载工具)
 	* [安装](#安装)
+	* [使用](#使用)
 	* [配置文件](#配置文件)
 		* [节点描述](#节点描述)
 	* [代下载网站](#代下载网站)
@@ -22,6 +23,17 @@
 git clone https://github.com/denstiny/Cgit.git
 make 
 make install
+// windows 用户需要手动更改配置文件地址,和makefile文件才能安装
+```
+
+## 使用
+```sh
+克隆到当前目录
+cgit clone https://github.com/denstiny/Cgit.git
+克隆到指定目录
+cgit clone https://github.com/denstiny/Cgit.git /mnt/home/cgit
+帮助文档
+cgit -h
 ```
 ## 配置文件
 ![20210310012016](https://i.loli.net/2021/03/10/3xvzWkwehTgjK24.png)
@@ -66,7 +78,9 @@ make install
 - <font size=4><b>$date:2021-03-24$</b></font>  
   - 更改使用方法 使用cgit clone与原声git类似，这样可以方便骚操作：
 	- 例如：`alias git cgit` 临时使用`cgit` 代替`git`，对其`yay`用户和`vim`用户拷贝插件和应用程序源码有所帮助
+
+
 ## to do 
-- ~~自定修改克隆后的项目git配置（有时间在说问题不大）~~
+- ~~自动修正克隆后的项目git配置（有时间在说问题不大）~~
 - 自动更换代理
 - qt界面工具
