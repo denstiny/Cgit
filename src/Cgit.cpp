@@ -65,8 +65,9 @@ bool CgitWorkCompany::CgitConfigRead(string &strk) {
 void CgitWorkCompany::ModifyAddress(int argc,char *argv[]) {
 	// 取出 文件地址
 	string Str_,file_Str;
+	cout << argc << endl;
 	if(argc > 3)
-		string  url_Work = argv[argc-1];
+		file_Str = argv[argc-1];
 	if(argc <= 3) {
 
 		int url_s = strlen(argv[argc-1]);
@@ -78,11 +79,12 @@ void CgitWorkCompany::ModifyAddress(int argc,char *argv[]) {
 			else
 				file_Str.insert(file_Str.begin(),argv[2][url_s]);
 		}
+		file_Str = "./"+file_Str;
 	}
+	file_Str += +"/.git/config"; 
 
 	// 打开文件
 	string filetxt_,tempstr_;
-	file_Str = "./"+file_Str+"/.git/config";
 	file.open(file_Str.c_str(),ios::in | ios::out);
 	if(!file.is_open()) {
 		cout << " 打开git 配置文件失败 " << endl;
