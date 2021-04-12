@@ -65,7 +65,7 @@ bool CgitWorkCompany::CgitConfigRead(string &strk) {
 void CgitWorkCompany::ModifyAddress(int argc,char *argv[]) {
 	// 取出 文件地址
 	string Str_,file_Str;
-	cout << argc << endl;
+	//cout << argc << endl;
 	if(argc > 3)
 		file_Str = argv[argc-1];
 	if(argc <= 3) {

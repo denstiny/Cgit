@@ -1,5 +1,5 @@
 cc:
-	g++ ./main/main.cpp ./src/Cgit.cpp -v -w -g -o cgit
+	g++ -static  ./main/main.cpp ./src/Cgit.cpp -v -w -g -o cgit
 install:
 	@sudo cp -uf cgit /usr/local/bin/cgit
 	@sudo chmod +x /usr/local/bin/cgit

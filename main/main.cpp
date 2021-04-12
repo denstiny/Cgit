@@ -45,7 +45,7 @@ bool CgitClone(string &url) {
 		return false;
 	}
 	fgets(buffer ,sizeof(buffer),fp);
-	cout << buffer << endl;
+	//cout << buffer << endl;
 	pclose(fp);
 	return true;
 }

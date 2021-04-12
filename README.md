@@ -36,7 +36,10 @@ cgit clone https://github.com/denstiny/Cgit.git /mnt/home/cgit
 cgit -h
 ```
 ## 配置文件
-![20210310012016](https://i.loli.net/2021/03/10/3xvzWkwehTgjK24.png)
+
+> 使用方法
+![20210412192646](https://i.loli.net/2021/04/12/nksYho25qtwWd1P.png)
+
 配置文件路径为`HOME/.config/Cgit/Cgit.json`
 <font size=4><b>默认配置文件</b></font>  
 ```
