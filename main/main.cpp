@@ -52,8 +52,8 @@ bool CgitClone(string &url) {
 
 
 int main(int argc,char *argv[]) {
-	string st = argv[1];
-	if(argc == 2 && st == "-h") 
+	string st;
+	if(argc <= 2 || ( st=argv[1]) == "-h") 
 		ShowHelp();
 	CgitWorkCompany p(argc,argv);
 	if (CgitClone(p.URL) == true)
